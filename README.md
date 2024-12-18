@@ -10,6 +10,8 @@ La tarea está realizada siguiendo este path o dirección:
 
 Si se está usando XAMPP, guardar el contenido en: `C:\xampp\htdocs\projects\DWES03_TE02`
 
+## Configuración en localhost usando un vhost (opcional):
+
 ### Configuración hosts:
 +  En __Windows__: `C:\Windows\System32\drivers\etc\hosts` añadir DNS personalizado. Por ejemplo `127.0.0.1 dwes03.test`
 
