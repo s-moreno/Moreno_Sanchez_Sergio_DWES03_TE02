@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gasas",
+    "stock_actual": "30",
+    "stock_minimo": "25"
+  },
+  {
+    "id": 2,
+    "nombre": "Manta térmica",
+    "stock_actual": "5",
+    "stock_minimo": "5"
+  },
+  {
+    "id": 3,
+    "nombre": "Venda crepé 10x5",
+    "stock_actual": "5",
+    "stock_minimo": "10"
+  },
+  {
+    "id": 4,
+    "nombre": "Mascarilla 7cc Adulto",
+    "stock_actual": "15",
+    "stock_minimo": "13"
+  },
+  {
+    "id": 5,
+    "nombre": "Mascarilla 100% Adulto",
+    "stock_actual": "10",
+    "stock_minimo": "8"
+  },
+  {
+    "id": 6,
+    "nombre": "Mascarilla nebulización Adulto",
+    "stock_actual": "10",
+    "stock_minimo": "10"
+  },
+  {
+    "id": 7,
+    "nombre": "Jeringa 2ml",
+    "stock_actual": "15",
+    "stock_minimo": "15"
+  },
+  {
+    "id": 8,
+    "nombre": "Jeringa 5ml",
+    "stock_actual": "7",
+    "stock_minimo": "15"
+  },
+  {
+    "id": 9,
+    "nombre": "Jeringa 10ml",
+    "stock_actual": "11",
+    "stock_minimo": "15"
+  },
+  {
+    "id": 10,
+    "nombre": "Vacutainer",
+    "stock_actual": "10",
+    "stock_minimo": "10"
+  },
+  {
+    "id": 11,
+    "nombre": "Tijeras quirúrgicas 14cm",
+    "stock_actual": "3",
+    "stock_minimo": "10"
+  },
+  {
+    "id": 12,
+    "nombre": "Guantes desechables Talla M",
+    "stock_actual": "100",
+    "stock_minimo": "150"
+  },
+  {
+    "id": 13,
+    "nombre": "Guantes desechables Talla L",
+    "stock_actual": "80",
+    "stock_minimo": "100"
+  },
+  {
+    "id": 14,
+    "nombre": "Esparadrapo 5m",
+    "stock_actual": "20",
+    "stock_minimo": "30"
+  },
+  {
+    "id": 15,
+    "nombre": "Bata estéril Talla XL",
+    "stock_actual": "8",
+    "stock_minimo": "8"
+  },
+  {
+    "id": 16,
+    "nombre": "Termómetro digital",
+    "stock_actual": "4",
+    "stock_minimo": "5"
+  },
+  {
+    "id": 17,
+    "nombre": "Desinfectante manos 500ml",
+    "stock_actual": "12",
+    "stock_minimo": "10"
+  },
+  {
+    "id": 18,
+    "nombre": "Tubo endotraqueal 8mm",
+    "stock_actual": "2",
+    "stock_minimo": "5"
+  },
+  {
+    "id": 19,
+    "nombre": "Venda elástica 10cm",
+    "stock_actual": "7",
+    "stock_minimo": "15"
+  },
+  {
+    "id": 20,
+    "nombre": "Compresa estéril",
+    "stock_actual": "20",
+    "stock_minimo": "25"
+  },
+  {
+    "id": 21,
+    "nombre": "Catéter intravenoso 20G",
+    "stock_actual": "5",
+    "stock_minimo": "10"
+  },
+  {
+    "id": 22,
+    "nombre": "Catéter intravenoso 18G",
+    "stock_actual": "3",
+    "stock_minimo": "8"
+  }
+]

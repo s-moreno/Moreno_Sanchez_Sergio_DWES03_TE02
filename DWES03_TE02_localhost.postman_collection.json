@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "88be06bb-b1e6-4c15-99bb-7ec18557493d",
+		"name": "DWES03_TE02 (Localhost)",
+		"description": "En este archivo de ejemplo encontrarás las consultas HTTP básicas necesarias para completar la Tarea Evaluativa 2 de la Unidad Didáctica 3 de DWES. El ejemplo está basado en una aplicación de un almacén de productos de una ambulancia de emergencias, en la que podrás realizar operaciones CRUD sobre las publicaciones o posts de un blog.\n\n🔍 **¿Qué puedes hacer?**  \nCon esta colección, podrás ejecutar las operaciones básicas de un sistema REST para gestionar posts en un blog. Entre las operaciones disponibles, encontrarás:\n\n1. **Recuperar la información de todos los productos**: Verás la lista completa de los productos y sus detalles.\n    \n2. **Consultar un producto específico por su ID**: Obtendrás los detalles de un prodcuto en concreto.\n    \n3. **Insertar un nuevo producto**: Podrás añadir un nuevo producto al almacén.\n    \n4. **Modificar un producto existente**: Actualiza el contenido completo de un producto.\n    \n5. **Modficar parcialmente un producto existente**: Actualizar algún campo de un producto.\n    \n6. **Eliminar un post**: Elimina un producto del blog de forma definitiva.\n    \n7. **Obtener los productos bajo stock mínimo**: Mostrará una lista de los productos que están por debajo del mínimo establecido para sí, así como la cantidad necesario que habrá que solicitar para reponerlo y que vuelva a estar igualado a su stock mínimo.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34019719"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products"
+					]
+				},
+				"description": "Esta solicitud GET obtiene una lista de todos los productos disponibles en el almacén.\n\n**Caso de uso:** Al pulsar enviar debería devolver la información de todos los productos disponibles."
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products",
+						"{{id}}"
+					]
+				},
+				"description": "Esta solicitud GET obtendría un producto específico basado en su ID.\n\n**Caso de uso:** Si se cambia el valor de `{{id}}` en la URL al ID del producto que quieres consultar y debería devolver los detalles de ese producto concreto."
+			},
+			"response": []
+		},
+		{
+			"name": "Get products under Min",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products/min",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products",
+						"min"
+					]
+				},
+				"description": "Esta solicitud GET obtiene una lista de todos los productos que su cantidad esté por debajo del mínimo establecido.\n\n**Caso de uso:** Al pulsar enviar debería devolver la información de todos los productos que su cantidad esté por debajo del mínimo establecido, así como la cantidad necesaria que hace falta para igual de nuevo la cantidad al mínimo."
+			},
+			"response": []
+		},
+		{
+			"name": "Create new product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Nuevo producto\",\n    \"stock_actual\": 17,\n    \"stock_minimo\": 17\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products"
+					]
+				},
+				"description": "Esta solicitud POST crearía un nuevo proudcto en el almacén.\n\n**Caso de uso:** En este caso, en el cuerpo de la solicitud se recibiría un JSON con los campos `nombre`, `stock_actual` y `stock_minimo` que contendrían el nombre del producto, la cantidad real disponible del producto y la cantidad mínima que hay que tener en stock."
+			},
+			"response": []
+		},
+		{
+			"name": "Update product by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Producto Actualizado\",\n    \"stock_actual\": 5,\n    \"stock_minimo\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products",
+						"{{id}}"
+					]
+				},
+				"description": "Esta solicitud PUT actualiza un producto existente en el almacén basándose en su ID.\n\n**Caso de uso:** Si se cambia el valor de `{{id}}` al ID del producto que quieres actualizar, editando\n\n`nombre`, `stock_actual` y `stock_minimo` en el cuerpo de la solicitud con los valores nuevos se modificaría el contenido de ese producto en concreto."
+			},
+			"response": []
+		},
+		{
+			"name": "Partial update product by ID Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stock_actual\": 30\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products",
+						"{{id}}"
+					]
+				},
+				"description": "Esta solicitud PATCH actualiza parcialment un producto existente en el almacén basándose en su ID.\n\n**Caso de uso:** Si se cambia el valor de `{{id}}` al ID del producto que quieres actualizar, editando uno o varios de los campos `nombre`, `stock_actual` y `stock_minimo` en el cuerpo de la solicitud con los valores nuevos se modificaría el contenido de ese producto en concreto."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projects/DWES03_TE02/public/api/v1/products/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projects",
+						"DWES03_TE02",
+						"public",
+						"api",
+						"v1",
+						"products",
+						"{{id}}"
+					]
+				},
+				"description": "Esta solicitud DELETE elimina un producto específico del almacén por su ID.\n\n**Caso de uso:** Si se cambia el valor de `{{id}}` al ID del producto que quieres eliminar, este se eliminaría al recibir y procesar la solicitud."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		}
+	]
+}
